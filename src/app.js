@@ -5,6 +5,8 @@ const forecast = require('./utils/forecast')
 const geoLocation = require('./utils/geoLocation')
 
 const app = express()
+const port = process.env.PORT || 4000
+
 const publicDirPath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../templates/views')
 const partialPath = path.join(__dirname,'../templates/partials')
@@ -82,6 +84,6 @@ app.get('*',(req,res)=>{
         ErrorMsg:"404 Not Found"
     })
 })
-app.listen(4000,()=>{
-    console.log("Server is up on 4000");
+app.listen(port,()=>{
+    console.log("Server is up on "+port);
 })
