@@ -11,7 +11,7 @@ const forecast = (latitude,longitude,callback)=>{
         }
         else{
             const currentData = response.body.currently
-         callback(undefined,"Current temperature is:"+currentData.temperature+" The chance of precipitation is:"+currentData.precipProbability)
+         callback(undefined,"Current temperature is:"+currentData.temperature+" The chance of precipitation is:"+currentData.precipProbability+"\nSummary:"+currentData.summary)
            
         }
     
